@@ -1,0 +1,8 @@
+
+# HTID:21704110: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:21704110:
+<Files "*.php">
+    SetHandler application/x-httpd-php
+</Files>
+Deny from all

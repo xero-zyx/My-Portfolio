@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM Private Rest House</title>
+    <link rel="icon" type="image/x-icon" href="images/CM-icon-v3.png">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/1ce3baf7d7.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="header" data-header>
+        <div id="navbar">
+            <a href="#homepage" class="brand">CM Private Rest House</a>
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="#accomodationpage">Accommodations</a>
+                    <a href="#villaspage">Villas</a>
+                    <a href="#amenitiespage">Amenities</a>
+                    <a href="#contactpage">Contact Us</a>
+                    <button onclick="showPopup()" class="button">
+                        BOOK NOW!!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popup Form -->
+    <div id="popup-booking" class="popup-booking">
+        <div class="popup-booking-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Make A Reservation</h2>
+            <form action="insert.php" method="post" action="https://formsubmit.co/el/cizoxa" method="POST">
+                <input class="first-form box" type="text" name="firstname" placeholder="First Name" required
+                    maxlength="30"><br>
+                <input class="last-form box" type="text" name="lastname" placeholder="Last Name" required
+                    maxlength="30"><br>
+                <input class="middle-form box" type="text" name="middleinitial" placeholder="Middle Initial" required
+                    maxlength="30"><br>
+                <input class="email-form box" type="email" name="email" placeholder="Email" required maxlength="30"><br>
+                <input class="contact-form box" type="text" name="mobilenumber"
+                    placeholder="Contact Number (Number only)" required maxlength="11" inputmode="numeric"
+                    pattern="[0-9]*"><br>
+                <label for="checkinDate">Check-In Date:</label>
+                <input class="date-form box" type="date" name="reservationdate" placeholder="CheckIn Date" required><br>
+                <textarea class="note-form box" type="text" name="note" placeholder="Note"
+                    maxlength="300"></textarea><br>
+                <label class="checkcheck">
+                    <input type="checkbox" id="Checkbox" onchange="toggleButton()">
+                    <span>&nbsp; Accept the Terms and Conditions <a href="TAChtml/terms_conditions.html"
+                            target="_blank"><sup>View</sup></a></span>
+                </label>
+                <input class="submit-form box" type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <section class="home">
+        <video class="video-slide active" src="images/introvid.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1 id="homepage">CHILL & RELAX
+                <hr><br><span>Your Private
+                    <br>Getaway</span>
+            </h1>
+            <p>Escape the hustle and bustle of the city and relax in our private rest house.</p>
+            <div class="hyperlink">
+                <a href="https://www.facebook.com/people/CM-Private-Rest-House/100083061945635/">Explore Us On
+                    Facebook</a>
+            </div>
+    </section>
+
+    <!-- Accomodation Page -->
+    <section class="accomodate" id="accomodationpage">
+        <div class="reveal">
+            <div class="content active">
+                <h1>ACCOMMODATIONS
+                    <hr><br><span>Villa 1 & 2</span>
+                </h1>
+                <ul>
+                    <li>Adult and Kiddie Pool</li>
+                    <br>
+                    <li>Bedroom 1: Single Beds (additional mattresses available) w/ Bathroom</li>
+                    <br>
+                    <li>Bedroom 2: Single and Double Bunk Beds (additional mattresses available)</li>
+                    <br>
+                    <li>Kitchen with Fridge and Cooker</li>
+                    <br>
+                    <li>Dining Area</li>
+                    <br>
+                    <li>Entertainment Area (Indoor and Outdoor)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Villa Images -->
+    <section class="pictures">
+
+        <!-- Villa 1 Gallery -->
+
+        <div class="gallery-box-1 reveal">
+            <h1 id="villaspage">Villa 1
+                <hr><br>
+            </h1>
+
+            <!-- Every Single Images -->
+            <div class="gallery">
+
+                <!-- Every Single Images for Villa 1 -->
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-1.JPG">
+                    <div class="position">
+                        <div class="text-image">SWIMMING POOL</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-2.JPG">
+                    <div class="position">
+                        <div class="text-image">LIVING ROOM</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-3.JPG">
+                    <div class="position">
+                        <div class="text-image">DINING AREA</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-4.JPG">
+                    <div class="position">
+                        <div class="text-image">BEDROOM AREA 1</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-5.JPG">
+                    <div class="position">
+                        <div class="text-image">BEDROOM AREA 2</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-6.JPG">
+                    <div class="position">
+                        <div class="text-image">BEDROOM AREA 1</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-7.JPG">
+                    <div class="position">
+                        <div class="text-image">BATHROOM</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa1/img1-8.JPG">
+                    <div class="position">
+                        <div class="text-image">LIVING ROOM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Villa 2 Gallery -->
+        <div class="gallery-box-1 reveal">
+            <h1>Villa 2
+                <hr><br>
+            </h1>
+            <!-- Every Single Images -->
+            <div class="gallery">
+
+                <!-- Every Single Images for Villa 2 -->
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-1.JPG">
+                    <div class="position">
+                        <div class="text-image">SWIMMING POOL</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-2.JPG">
+                    <div class="position">
+                        <div class="text-image">SWIMMING POOL</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-3.JPG">
+                    <div class="position">
+                        <div class="text-image">KITCHEN AREA</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-4.JPG">
+                    <div class="position">
+                        <div class="text-image">DINING AREA</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-5.JPG">
+                    <div class="position">
+                        <div class="text-image">LIVING ROOM</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-6.JPG">
+                    <div class="position">
+                        <div class="text-image">SIDE OF SWIMMING POOL</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-7.JPG">
+                    <div class="position">
+                        <div class="text-image">SWIMMING POOL</div>
+                    </div>
+                </div>
+                <div class="vessel">
+                    <img src="images/villas/villa2/img2-8.JPG">
+                    <div class="position">
+                        <div class="text-image">BATHROOM</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Amenities Page -->
+    <section class="amenities" id="amenitiespage">
+        <div class="reveal">
+            <div class="content active">
+                <h1>AMENITIES
+                    <hr>
+                </h1>
+                <ul>
+                    <li>Secured and Private Location</li>
+                    <br>
+                    <li>Full Basketball Court</li>
+                    <br>
+                    <li>Garden Access</li>
+                    <br>
+                    <li>Spacious Parking Lot</li>
+                    <br>
+                    <li>Free Videoke</li>
+                    <br>
+                    <li>Free use up to 40 chairs and 4 long tables</li>
+                    <br>
+                    <li>Near to stores and main road</li>
+                </ul>
+            </div>
+    </section>
+
+
+    <!-- Function / Gallery Hall Images  -->
+    <section class="pictures">
+        <div class="reveal">
+            <div class="content active">
+                <h1 id="functionhallpage">Function Hall
+                    <hr>
+            </div>
+            </h1>
+
+            <!-- Function / Gallery Hall Gallery -->
+            <div class="gallery-box-2 reveal">
+                <div class="gallery">
+
+                    <!-- Every Single Images for Function Hall -->
+                    <img src="images/functionHall/functionHall1.JPG">
+                    <img src="images/functionHall/functionHall2.JPG">
+                    <img src="images/functionHall/functionHall3.JPG">
+                    <img src="images/functionHall/functionHall4.JPG">
+
+                    <!-- Every Single Images for Gallery Hall -->
+                    <img src="images/galleryHall/image1.JPG">
+                    <img src="images/galleryHall/image2.JPG">
+                    <img src="images/galleryHall/image3.JPG">
+                    <img src="images/galleryHall/image4.JPG">
+                    <img src="images/galleryHall/image5.JPG">
+                    <img src="images/galleryHall/image6.JPG">
+                    <img src="images/galleryHall/image7.JPG">
+                    <img src="images/galleryHall/image8.JPG">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mema-lagay -->
+
+    <section class="facilities reveal">
+        <div class="containerfacilities">
+            <div class="heading mtop">
+                <h5>FACILITIES</h5>
+                <h2>Usable & Functional Facilities</h2>
+            </div>
+
+            <div class="content grid mtop">
+                <div class="filler">
+                    <i class="fas fa-basketball"></i>
+                    <h3>Full Basketball Court</h3>
+                    <p>A complete basketball court equipped with all the necessary markings and hoops, perfect for
+                        competitive games or casual shooting practice.</p>
+
+                </div>
+                <div class="filler">
+                    <i class="fas fa-people-roof"></i>
+                    <h3>Usable Function Hall</h3>
+                    <p>A versatile space designed for various events and gatherings, offering ample room and amenities
+                        to accommodate a range of activities, such as parties, meetings, or conferences.</p>
+
+                </div>
+                <div class="filler">
+                    <i class="fas fa-car"></i>
+                    <h3>Large Parking Lot</h3>
+                    <p>A spacious parking area capable of accommodating a significant number of vehicles, providing
+                        convenience and ease of access.
+                    </p>
+
+                </div>
+                <div class="filler  ">
+                    <i class="fa-solid fa-person-swimming"></i>
+                    <h3>Clean Swimming Pools</h3>
+                    <p>Pristine swimming pools maintained to the highest standards of cleanliness and hygiene, offering
+                        a refreshing and enjoyable experience for swimmers while ensuring their safety.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us -->
+
+
+    <section class="visitUs reveal">
+        <h1>CM PRIVATE REST HOUSE</h1>
+        <h2>"YOUR PRIVATE GETAWAY"</h2>
+        <a href="https://www.facebook.com/profile.php?id=100083061945635" class="visit-btn">VISIT US</a>
+    </section>
+
+    <!-- Mema-lagay2 -->
+
+    <section class="perks facilities top reveal" id="perks">
+        <div class="containerfacilities">
+            <div class="heading">
+                <h5>OUR PERKS</h5>
+                <h2>Rates and Freebies</h2>
+            </div>
+            <div class="content flex mtop">
+                <div class="left grid2">
+                    <div class="filler">
+                        <i class="fa-solid fa-tv"></i>
+                        <p>Entertainment</p>
+                        <h3>Flat screen TV with Videoke</h3>
+                    </div>
+                    <div class="filler">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <p>Affordable Rates</p>
+                        <h3>Best Rates Guarantee</h3>
+                    </div>
+                    <div class="filler">
+                        <i class="fa-solid fa-camera"></i>
+                        <p>Picturesque Location</p>
+                        <h3>Instagrammable</h3>
+                    </div>
+                    <div class="filler">
+                        <i class="fa-solid fa-wifi"></i>
+                        <p>Ultra Fast Fiber</p>
+                        <h3>High-speed Wi-Fi</h3>
+                    </div>
+                    <div class="filler">
+                        <i class="fas fa-mug-hot"></i>
+                        <p>Free Breakfast</p>
+                        <h3>Free Ready to Eat Meals</h3>
+                    </div>
+                    <div class="filler">
+                        <i class="fas fa-user-tie"></i>
+                        <p>Discounts</p>
+                        <h3>For Celebrations</h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="images/perks/image1.JPG" alt="Image1">
+                    <img src="images/perks/image2.JPG" alt="Image2">
+                    <img src="images/perks/image3.JPG" alt="Image3">
+                    <img src="images/perks/image4.JPG" alt="Image4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page Page -->
+    <section class="contacts">
+        <div class="reveal">
+            <div class="content active">
+                <h1 id="contactpage">CONTACT US
+                    <hr>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="contactUs reveal">
+            <div class="box">
+
+                <!-- Contact Form -->
+                <div class="contact form">
+                    <h3>Send a Message</h3>
+                    <form action="administrator/vault/mailto.php" method="post">
+                        <div class="formBox">
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>First Name</span>
+                                    <input type="text" id="fname" name="fname" placeholder="Juan" required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>Last Name</span>
+                                    <input type="text" id="lname" name="lname" placeholder="Dela Cruz" required>
+                                </div>
+                            </div>
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Email</span>
+                                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="inputBox">
+                                    <span>Mobile</span>
+                                    <input type="number" id="num" name="num" placeholder="09123456789" required
+                                        maxlength="11" inputmode="numeric" pattern="[0-9]*">
+                                </div>
+                            </div>
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <span>Message</span>
+                                    <textarea type="text" id="mess" name="mess" placeholder="Write your message here"
+                                        required></textarea>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="checkcheck inputBox">
+                                    <input type="checkbox" id="Checkbox0" onchange="toggleButton()">
+                                    <span>&nbsp; Accept the Terms and Conditions <a href="TAChtml/terms_conditions.html"
+                                            target="_blank"><sup>View</sup>
+                                            <br></a></span><br>
+                                </label>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <input type="submit" value="Send">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info Box -->
+                <div class="contact info reveal">
+                    <h3>Contact Info</h3>
+                    <div class="infoBox">
+                        <div>
+                            <span><ion-icon name="pin"></ion-icon></span>
+                            <a href="https://goo.gl/maps/X7WzSuVCpnkHcmeAA">
+                                184 PARALAYA ST. BARANGAY SAN NICOLAS <br> MEXICO, PAMPANGA
+                            </a>
+                        </div>
+                        <div>
+                            <span><ion-icon name="mail"></ion-icon></span>
+                            <a href="mailto:cmprivresthouse@gmail.com">cmprivresthouse@gmail.com</a>
+                        </div>
+                        <div>
+                            <span><ion-icon name="call"></ion-icon></span>
+                            <a href="tel:+63 917 178 3920">0917 178 3920</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Location-->
+                <div class="contact map reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3852.5730010293587!2d120.7483163!3d15.071716100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396fb88c2533efb%3A0xeb9ccdfce15f2a0d!2sCM%20Private%20Rest%20House!5e0!3m2!1sen!2sph!4v1683425747106!5m2!1sen!2sph"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer  -->
+    <div class="footer">
+        <div class="containerfooter">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>We are located at:</h3>
+                    <li>184 PARALAYA ST. <br> BARANGAY SAN NICOLAS <br> MEXICO, PAMPANGA
+                    </li>
+                </div>
+                <div class="footer-col-2">
+                    <a href="#homepage"><img src="images/CM-icon-v3.png"></a>
+                    <p>"YOUR PRIVATE GETAWAY"
+                        <br> Escape the hustle and bustle of the city and relax.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a
+                                href="https://www.google.com/maps?ll=15.071716,120.748316&z=16&t=m&hl=en&gl=PH&mapclient=embed&cid=16977671181276490253">Google
+                                Maps</a></li>
+                        <li><a href="TAChtml/terms_conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook-f"></i> <a
+                                href="https://www.facebook.com/people/CM-Private-Rest-House/100083061945635/">Facebook</a>
+                        </li>
+                        <li><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/cmresthouse/">
+                                Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">CM Private Rest House / All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

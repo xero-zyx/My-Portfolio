@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="./assets/user.png" alt="User">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">My Portfolio</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">My Name</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="profile" class="fade-up">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.jpg" alt="My profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Paolo Gabriel F. Cardeño</h1>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/my-cv-resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="window.location.href='https://www.linkedin.com/in/paolo-gabriel-cardeño-545201342'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/xero-zyx'" />
+      </div>
+    </div>
+  </section>  
+
+  <section id="about">
+    <div class="reveal">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+        </div>
+
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              I am a fourth-year Bachelor of Science in Computer Engineering student
+              at Don Honorio Ventura State University with a solid foundation in both
+              technical and practical skills. I am proficient in computer assembly,
+              including hardware troubleshooting and component integration, as well as
+              basic Microsoft Office applications for creating reports and presentations.
+              My experience includes simple video editing for academic and personal projects,
+              basic coding for developing and debugging programs, and foundational
+              knowledge of PCB design for creating simple circuit boards.
+              With a passion for continuous learning, I am eager to apply my skills to innovative
+              projects and contribute to technological advancements!
+            </p>
+          </div>
+
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Age</h3>
+              <p>21 Years Old</p>
+              <h3>Address</h3>
+              <p>Paligui, Apalit, Pampanga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="reveal">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Java</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Others</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Microsoft Office</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Adobe Premiere Pro</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>KiCAD / Proteus</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="reveal">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Software Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="row-container">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/cm-priv.png" alt="Project 1" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title">CM Private Rest House</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='./assets/projects/cm-private-resort/index.html'">
+                  View
+                </button>
+                <button class="btn btn-color-2 project-btn" 
+                  onclick="window.open('./assets/cm-report.pdf')">
+                  Report
+                </button>
+              </div>
+            </div>
+
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/ajp-car.png" alt="Project 2" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title">AJP Car Rental</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='./assets/projects/ajp-car-rental/index.html'">
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-container">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/crjps-finance.png" alt="Project 3" class="project-img-2" />
+              </div>
+              <h2 class="experience-sub-title project-title">CRJPS Finance</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://drive.google.com/drive/folders/1yhD5bNXOS_vrwUOgUuv5Awzy466tsq74?usp=drive_link'">
+                  View
+                </button>
+              </div>
+            </div>
+            
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/color-game.png" alt="Project 2" class="project-img-2" />
+              </div>
+              <h2 class="experience-sub-title project-title">Color Game</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://drive.google.com/file/d/1a49Qk914DHEUUDjnBBi5cMjA_-Vz-hbT/view?usp=drive_link'">
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="reveal">
+      <h1 class="title">Hardware Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="row-container">
+
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/power-supply.jpg" alt="Project 1" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title">Power Supply Unit</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://drive.google.com/drive/folders/1h_OApG1lpQY29rkalWXIjRstqxASssOz?usp=sharing'">
+                  View
+                </button>
+              </div>
+            </div>
+
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/gas-leak-group-photo.jpg" alt="Project 2" class="project-img" />
+              </div>
+              <h2 class="experience-sub-title project-title">Automated Gas Leakage Detection and Valve Control</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://drive.google.com/drive/folders/1bOzlYxVhteI7Aj8u_7Z2de1iRNgFx_Lm?usp=sharing'">
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-container">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/automated-trash-group-photo.jpg" alt="Project 3" class="project-img-2" />
+              </div>
+              <h2 class="experience-sub-title project-title">Automated Trash Segregation System</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                  onclick="location.href='./assets/projects/cm-private-resort/index.html'">
+                  View
+                </button>
+                <button class="btn btn-color-2 project-btn" 
+                  onclick="window.open('./assets/automated-trash-segregation-system-report.pdf')">
+                  Report
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="reveal">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:paologabrielcardeno@gmail.com">paologabrielcardeno@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img src="./assets/contact.png" alt="phone icon" class="icon contact-icon phone-icon" />
+          <p><a href="tel:+639948655740">+63 994 895 5740</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon linkedin-icon" />
+          <p><a href="https://www.linkedin.com/in/paolo-gabriel-cardeño-545201342">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

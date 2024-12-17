@@ -1,0 +1,36 @@
+table {
+    border: 1px solid rgb(52, 126, 49);
+    border-spacing: 3px;
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    border-bottom: 8px solid rgb(52, 126, 49);
+
+}
+
+td,
+tr {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-display: inherit;
+    border: 1px solid rgb(171, 173, 171);
+
+}
+
+.action {
+    text-align: center;
+}
+
+a {
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+}

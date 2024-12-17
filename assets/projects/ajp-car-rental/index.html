@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJP Car Rental Pampanga</title>
+
+  <!--- favicon-->
+  <link rel="shortcut icon" href="images/ajp-logo/AJP-Car-Rental-logo.png" type="image/svg+xml">
+
+  <!--- custom css link-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<!--- #HEADER-->
+
+<header class="header" data-header>
+  <div class="container">
+    <div class="overlay" data-overlay></div>
+    <a href="#" class="logo">
+      <img src="images/ajp-logo/logo.png" alt="ajp-logo">
+    </a>
+    <nav class="navbar" data-navbar>
+      <ul class="navbar-list">
+        <li>
+          <a href="#" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#featured-car" class="navbar-link" data-nav-link>Explore Cars</a>
+        </li>
+
+        <li>
+          <a href="#map-location" class="navbar-link" data-nav-link>Location</a>
+        </li>
+
+        <li>
+          <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+        </li>
+
+        <li>
+          <a href="" onclick="window.open('control_panel/showavaildates.php')" class="navbar-link"
+            data-nav-link>Availibility</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="header-contact">
+        <a href="tel:+63 943 072 4442" class="contact-link">0943 072 4442</a>
+        <span class="contact-time">Mon - Sun: 9:00 AM - 6:00 PM</span>
+      </div>
+
+      <a href="control_panel/fillupform.php" class="btn" aria-labelledby="aria-label-txt">
+        <ion-icon name="book"></ion-icon>
+        <span id="aria-label-txt">Book Now</span>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<body>
+  <main>
+    <article>
+
+      <!--- #HERO-->
+
+      <section class="section hero" id="home" bg="red">
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="h1 hero-title">Low on Budget ?</h2>
+            <p class="hero-text">
+              We can offer a cheaper price but quality cars
+            </p>
+          </div>
+
+          <div class="hero-banner">
+            <img src="images/car-images/toyota-vios-v2.png" alt="Image1" class="active">
+            <img src="images/car-images/honda-city-v2.jpeg" alt="Image2">
+            <img src="images/car-images/mirage-g4-v2.jpg" alt="Image3">
+            <img src="images/car-images/nissan-almera-v2.jpg" alt="Image4">
+            <img src="images/car-images/honda-civic-type-r-v2.jpg" alt="Image5">
+            <img src="images/car-images/toyota-altis-v2.jpg" alt="Image6">
+          </div>
+
+          <form action="control_panel/fillupform.php" class="hero-form">
+            <div class="text-hero">
+              <label class="hero-text"><strong>₱ 999 / day <br> Depending on destination </strong></label>
+            </div>
+            <button type="submit" class="btn" href="">BOOK NOW</button>
+          </form>
+
+        </div>
+      </section>
+
+      <!--- #FEATURED CAR-->
+
+      <section class="section featured-car" id="featured-car">
+        <div class="container reveal">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Featured Cars</h2>
+          </div>
+
+          <ul class="featured-car-list">
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="images/featured-cars/hyundai-accent-crystal-white.jpg" alt="Hyundai Accent White 2022"
+                    loading="lazy" width="440" height="300" class="w-100">
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Hyundai Accent <br> Crystal White</a>
+                    </h3>
+                    <data class="year" value="2022">2022</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People Capacity</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">16 km / 1-liter</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="car-price-wrapper">
+                    <p class="car-price">
+                      <strong>₱ 999</strong> / day
+                      <span>Depending on destination</span>
+                    </p>
+                    <button class="btn" class="btn"
+                      onclick="window.location.href = 'control_panel/showavaildates.php';">Check
+                      Available Date</button>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="images/featured-cars/mitsubishi-mirage-g4-infrared.jpg"
+                    alt="Mitsubishi Mirage G4 Infrared 2022" loading="lazy" width="440" height="300" class="w-100">
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Mitsubishi Mirage G4 <br> Infrared</a>
+                    </h3>
+                    <data class="year" value="2022">2022</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People Capacity</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">22.8 km / 1-liter</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="car-price-wrapper">
+                    <p class="car-price">
+                      <strong>₱ 999</strong> / day
+                      <span>Depending on destination</span>
+                    </p>
+                    <button class="btn" class="btn"
+                      onclick="window.location.href = 'control_panel/showavaildates.php';">Check
+                      Available Date</button>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="images/featured-cars/mitsubishi-mirage-g4-mercury-gray.jpg"
+                    alt="Mitsubishi Mirage G4 Mercury Gray 2022" loading="lazy" width="440" height="300" class="w-100">
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Mitsubishi Mirage G4 <br> Dark Gray</a>
+                    </h3>
+                    <data class="year" value="2022">2022</data>
+                  </div>
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People Capacity</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Gasoline</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">22.8 km / 1-liter</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="car-price-wrapper">
+                    <p class="car-price">
+                      <strong>₱ 999</strong> / day
+                      <span>Depending on destination</span>
+                    </p>
+                    <button class="btn" class="btn"
+                      onclick="window.location.href = 'control_panel/showavaildates.php';">Check
+                      Available Date</button>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+
+      <!--- #GET START-->
+
+      <section class="section get-start">
+        <div class="container reveal">
+
+          <h2 class="h2 section-title">Get started with 4 simple steps</h2>
+
+          <ul class="get-start-list">
+
+            <li>
+              <div class="get-start-card">
+
+                <div class="card-icon icon-1">
+                  <ion-icon name="person-add-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Tell who you are</h3>
+
+                <p class="card-text">
+                  Please include your name, age, address, and contact details.
+                </p>
+                <br>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="get-start-card">
+
+                <div class="card-icon icon-2">
+                  <ion-icon name="car-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Tell us what car you want</h3>
+
+                <p class="card-text">
+                  Please provide information about your preferred car make, model, year, and any specific features.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="get-start-card">
+
+                <div class="card-icon icon-3">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Talk with us</h3>
+
+                <p class="card-text">
+                  Let us know what requirements you would like to discuss, and we'll do our best to assist you.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="get-start-card">
+
+                <div class="card-icon icon-4">
+                  <ion-icon name="card-outline"></ion-icon>
+                </div>
+
+                <h3 class="card-title">Make a deal</h3>
+
+                <p class="card-text">
+                  You can thoroughly inspect the vehicle and consider getting a mechanic's opinion before making a
+                  purchase.
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!--- #LOCATION-->
+
+      <section class="maps" style="background-image: url(images/map/background-maps.jpeg);" id="map-location">
+        <div>
+          <div class="mapbox reveal">
+            <h2 class="h2 section-title">Google Geolocation</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.3108968350448!2d120.6150221962895!3d15.226671802879185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396ed536e4f8bc5%3A0xd64d97dcaf395f6b!2sAJP%20Car%20Rental!5e0!3m2!1sen!2sph!4v1684937690190!5m2!1sen!2sph"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!--- #REVIEW -->
+
+      <section class="section review" id="review">
+        <div class="container reveal">
+          <h2 class="h2 section-title">Reviews</h2>
+
+          <ul class="review-list review-content">
+
+            <li>
+              <div class="review-card">
+
+                <figure class="card-banner">
+
+                  <a>
+                    <img src="images/avatar/gray-woman.jpg" alt="Sobrang affordable and sobrang bait" loading="lazy"
+                      class="w-100">
+                  </a>
+
+                  <a class="btn card-badge">Shey Shey</a>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="https://www.facebook.com/people/AJP-Car-Rental-Pampanga/100089204783258/?sk=reviews">
+                      Sobrang affordable and sobrang bait ni Ate, sobrang considerate. Tapos nag share pa siya ng mga
+                      ideas or nagbibigay ng suggestions sa mga trips❤️. Thank you ate! sa uulitin💕</a>
+                  </h3>
+
+                  <div class="card-meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="01-24-2023">January 24, 2023</time>
+                    </div>
+
+                    <div class="rates">
+                      <data value="5">5</data>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="review-card">
+
+                <figure class="card-banner">
+
+                  <a>
+                    <img src="images/avatar/gray-man.jpg" alt="The most affordable" loading="lazy" class="w-100">
+                  </a>
+
+                  <a class="btn card-badge">J. L. Garcia</a>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="https://www.facebook.com/people/AJP-Car-Rental-Pampanga/100089204783258/?sk=reviews">
+                      The most affordable car rental kahit long trip at sobrang smooth transaction with the owner!<br>
+                      Sa uulitin ulit!😁🥰</a>
+                  </h3>
+
+                  <div class="card-meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="02-19-2023">February 19, 2023</time>
+                    </div>
+
+                    <div class="rates">
+                      <data value="5">5</data>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="review-card">
+
+                <figure class="card-banner">
+
+                  <a>
+                    <img src="images/avatar/gray-woman.jpg" alt="HIGHLY RECOMMENDED!!!" loading="lazy" class="w-100">
+                  </a>
+
+                  <a class="btn card-badge">R. B. Sicat</a>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    <a href="https://www.facebook.com/people/AJP-Car-Rental-Pampanga/100089204783258/?sk=reviews">
+                      HIGHLY RECOMMENDED!!!⭐️⭐️⭐️⭐️⭐️<br>
+                      Legit affordable! Super nice ng mga car, and accommodating and friendly ng owner! Sobrang dali
+                      niyang kausap, and hindi ka mahihirapan sa pagpapa-reserve. You can travel anywhere in Luzon all
+                      you want without breaking the bank!
+                    </a>
+                  </h3>
+
+                  <div class="card-meta">
+
+                    <div class="publish-date">
+                      <ion-icon name="time-outline"></ion-icon>
+
+                      <time datetime="05-29-2023">May 29, 2023</time>
+                    </div>
+
+                    <div class="rates">
+                      <data value="5">5</data>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+    </article>
+  </main>
+</body>
+
+<!--- #FOOTER-->
+
+<footer class="footer" id="bottom">
+  <div class="container">
+
+    <div class="footer-top reveal">
+
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/ajp-logo/logo-v2.png" alt="AJP logo">
+        </a>
+
+        <p class="footer-text">
+          Search for cheap rental cars in Pampanga. AJP Car Rental offers its
+          consumers an attractive and fun selection.
+        </p>
+      </div>
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Company</p>
+        </li>
+
+        <li>
+          <a href="about.html" class="footer-link">About Us</a>
+        </li>
+
+        <li>
+          <a href="#featured-car" class="footer-link">Pricing Plans</a>
+        </li>
+
+        <li>
+          <a href="#review" class="footer-link">Reviews</a>
+        </li>
+
+        <li>
+          <a href="" onclick="window.open('control_panel/showavaildates.php')" class="navbar-link" data-nav-link
+            class="footer-link">Availibility</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <ul class="social-list">
+
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100089204783258" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:acenasalmae@gmail.com" class="social-link">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+
+      <p class="copyright">Copyright © 2023 AJP Car Rental. All Rights Reserved.</p>
+
+    </div>
+
+  </div>
+</footer>
+
+<!--- custom js link-->
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
