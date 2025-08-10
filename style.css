@@ -246,6 +246,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  align-content: center;
 }
 
 .btn {
@@ -307,6 +308,9 @@ section {
   gap: 2rem;
   justify-content: center;
   flex: 1 1 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
 }
 
 .about-details-container {
@@ -371,6 +375,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .article-container {
@@ -380,12 +385,13 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  
 }
 
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   gap: 0.5rem;
 }
 
@@ -399,10 +405,14 @@ article .icon {
   position: relative;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+.projects-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
 }
+
 
 .project-img {
   border-radius: 2rem;
@@ -430,28 +440,25 @@ article .icon {
 
 #contact {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: 70vh;
+  justify-content: center;
 }
 
 .contact-info-upper-container {
-  display: flex;
-  justify-content: center;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  gap: 2rem;
+  align-content: center;
 }
 
 .contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+  padding: 1.5rem;
+  flex: 1;
+  text-align: center;
 }
 
 .contact-info-container p {
