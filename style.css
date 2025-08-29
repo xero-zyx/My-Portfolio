@@ -216,8 +216,13 @@ section {
   font-weight: 600;
 }
 
+.section__text__profile {
+  text-align: center;
+}
+
 .section__text__p1 {
   text-align: center;
+  padding-top: 15rem;
 }
 
 .section__text__p2 {
@@ -228,6 +233,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+
 }
 
 #socials-container {
