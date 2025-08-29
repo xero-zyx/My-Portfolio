@@ -47,11 +47,11 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { 
   #contact,
-  footer {
+  /* footer {
     height: 40vh;
-  }
+  } */
   #profile {
     height: 83vh;
     margin-bottom: 0;
