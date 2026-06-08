@@ -19,8 +19,9 @@
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
+  #experience, #skills
+  .experience-details-container
+  .skills-details-container {
     margin-top: 2rem;
   }
   #profile,
