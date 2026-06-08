@@ -18,6 +18,12 @@
   }
   #hamburger-nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+  #hamburger-nav .nav-right {
+    gap: 1rem;
   }
   #experience, #skills
   .experience-details-container

@@ -2,6 +2,38 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: rgb(85, 85, 85);
+  --border-color: rgb(163, 163, 163);
+  --border-dark: rgb(53, 53, 53);
+  --card-bg: #ffffff;
+  --menu-bg: #ffffff;
+  --btn-bg: rgb(53, 53, 53);
+  --btn-hover-bg: rgb(0, 0, 0);
+  --btn-text-hover: #ffffff;
+  --link-underline: rgb(181, 181, 181);
+  --toggle-bg: rgb(230, 230, 230);
+  --toggle-active-bg: rgb(53, 53, 53);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-primary: #f0f0f0;
+  --text-secondary: rgb(170, 170, 170);
+  --border-color: rgb(80, 80, 80);
+  --border-dark: rgb(120, 120, 120);
+  --card-bg: #1e1e1e;
+  --menu-bg: #1e1e1e;
+  --btn-bg: rgb(220, 220, 220);
+  --btn-hover-bg: #ffffff;
+  --btn-text-hover: #121212;
+  --link-underline: rgb(100, 100, 100);
+  --toggle-bg: rgb(60, 60, 60);
+  --toggle-active-bg: rgb(220, 220, 220);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +41,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 html {
@@ -16,7 +51,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
 }
 
 /* TRANSITION */
@@ -40,6 +75,12 @@ nav {
   height: 17vh;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .nav-links {
   gap: 2rem;
   list-style: none;
@@ -47,24 +88,68 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--text-primary);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: var(--bg-color);
 }
 
 a:hover {
   color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--link-underline);
 }
 
 .logo {
   font-size: 2rem;
+  color: var(--text-primary);
 }
 
 .logo:hover {
   cursor: default;
+}
+
+/* THEME TOGGLE */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 50%;
+  background: var(--toggle-bg);
+  cursor: pointer;
+  transition: all 300ms ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--border-dark);
+  transform: scale(1.05);
+}
+
+.theme-toggle-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.theme-toggle-icon--sun {
+  display: inline;
+}
+
+.theme-toggle-icon--moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle-icon--sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle-icon--moon {
+  display: inline;
 }
 
 /* HAMBURGER MENU */
@@ -90,7 +175,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--text-primary);
   transition: all 0.3 ease-in-out;
 }
 
@@ -98,7 +183,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--menu-bg);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -111,7 +196,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--text-primary);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
   
@@ -222,7 +307,7 @@ section {
 
 .section__text__p1 {
   text-align: center;
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 
 .section__text__p2 {
@@ -250,6 +335,10 @@ section {
   height: 2rem;
 }
 
+[data-theme="dark"] .icon {
+  filter: brightness(0) invert(1);
+}
+
 /* BUTTONS */
 
 .btn-container {
@@ -269,7 +358,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--border-dark) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -279,20 +368,21 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--btn-bg);
+  color: var(--btn-text-hover);
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: var(--btn-hover-bg);
 }
 
 .btn-color-2 {
   background: none;
+  color: var(--text-primary);
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: var(--bg-color) 0.1rem solid;
 }
 
 .btn-container {
@@ -345,12 +435,13 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--card-bg);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--border-dark) 0.1rem solid;
+  border-color: var(--border-color);
   text-align: center;
   margin-top: 3rem;
+  transition: background-color 300ms ease, border-color 300ms ease;
 }
 
 .details-container.color-container {
@@ -378,21 +469,21 @@ section {
   margin: 1rem;
   font-weight: 600;
   font-size: 1.75rem;
-  color: black;
+  color: var(--text-primary);
 }
 
 .experience-duration {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
   margin-bottom: 5rem;
 }
 
 .experience-location {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -455,12 +546,12 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--text-primary);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text-primary);
+  border-color: var(--border-color);
 }
 
 /* CONTACT */
@@ -474,12 +565,14 @@ article .icon {
 
 .contact-info-upper-container {
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--border-dark) 0.1rem solid;
+  border-color: var(--border-color);
   margin: 2rem auto;
   padding: 0.5rem;
   gap: 2rem;
   align-content: center;
+  background: var(--card-bg);
+  transition: background-color 300ms ease, border-color 300ms ease;
 }
 
 .contact-info-container {

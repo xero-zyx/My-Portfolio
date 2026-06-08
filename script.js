@@ -1,3 +1,19 @@
+// Dark Mode Toggle
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+}
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  setTheme(currentTheme === "dark" ? "light" : "dark");
+}
+
+document.querySelectorAll(".theme-toggle").forEach((button) => {
+  button.addEventListener("click", toggleTheme);
+});
+
 // Hamburger Menu
 
 function toggleMenu() {
